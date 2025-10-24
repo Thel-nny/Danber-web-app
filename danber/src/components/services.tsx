@@ -24,7 +24,7 @@ export default function Services() {
       color: "bg-amber-300",
       description: <>Learn English Daily<br />with the Right teachers<br />that will guide you.</>,
       image: "/Business.svg",
-      link: "/business",
+      link: "/bussiness",
     },
   ]
 

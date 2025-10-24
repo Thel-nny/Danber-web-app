@@ -24,7 +24,7 @@ export default function Gallery() {
     },
     {
       id: 5,
-      image: "Image5.jpg",
+      image: "/Image5.jpg",
       size: "small",
     },
     {
@@ -105,6 +105,8 @@ export default function Gallery() {
               <Image
                 src={item.image || "/placeholder.svg"}
                 alt={`Gallery item ${item.id}`}
+                width={400}
+                height={300}
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
