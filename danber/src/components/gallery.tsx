@@ -86,22 +86,22 @@ export default function Gallery() {
     },
       {
       id: 18,
-      image: "/Image18.jpg",
+      image: "/Image18.jpeg",
       size: "small",
     },
       {
       id: 19,
-      image: "/Image19.jpg",
+      image: "/Image19.jpeg",
       size: "small",
     },
       {
       id: 20,
-      image: "/Image20.jpg",
+      image: "/Image20.jpeg",
       size: "small",
     },
       {
       id: 21,
-      image: "/Image21.jpg",
+      image: "/Image21.jpeg",
       size: "small",
     },
       {
@@ -110,7 +110,7 @@ export default function Gallery() {
       size: "small",
     },{
       id: 23,
-      image: "/Image23.jpg",
+      image: "/Image23.jpeg",
       size: "small",
     },
     {

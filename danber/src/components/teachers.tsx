@@ -2,6 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 interface Teacher {
   id: number
@@ -17,14 +18,14 @@ const teachers: Teacher[] = [
     id: 1,
     name: "Berthel T. Maguillano",
     title: "General Manager / CEO",
-    bio: "Berthel Tabares Maguillano is the Chief Executive Officer and General Manager of DANBER Online Tutorial Services where she leads the company’s strategic direction, operations, and growth initiatives. With extensive experience in a wide range of ESL courses, specialized training and courses in Essential Management Skills, Human Resource and Management, Marketing and Communications, she has built a reputation for driving innovation, operational excellence, and sustainable business development. Under her leadership, DANBER  has maintained satisfaction with international language centers in China, Costa Rica, Colombia, Japan, Taiwan, Peru, Mexico and Vietnam. She is committed to fostering a culture of integrity, collaboration, and client-focused service, ensuring that the teaching methodology is properly imposed according to the specifications and standard procedure of various language centers worldwide.",
+    bio: "Berthel Tabares Maguillano is the Chief Executive Officer and General Manager of DANBER Online Tutorial Services where she leads the company's strategic direction, operations, and growth initiatives. With extensive experience in a wide range of ESL courses, specialized training and courses in Essential Management Skills, Human Resource and Management, Marketing and Communications, she has built a reputation for driving innovation, operational excellence, and sustainable business development. Under her leadership, DANBER  has maintained satisfaction with international language centers in China, Costa Rica, Colombia, Japan, Taiwan, Peru, Mexico and Vietnam. She is committed to fostering a culture of integrity, collaboration, and client-focused service, ensuring that the teaching methodology is properly imposed according to the specifications and standard procedure of various language centers worldwide.",
     image: "/CEO.png",
     avatar: "/CEO.png",
   },
   {
     id: 2,
     name: "BDM Danny Maguillano",
-    title: "Business Development Manager",
+    title: "Business Development Manager & Co-Founder",
     bio: "",
     image: "/3.svg",
     avatar: "/3.svg",
@@ -69,7 +70,7 @@ const teachers: Teacher[] = [
     image: "/8.svg",
     avatar: "/8.svg",
   },
-    {
+  {
     id: 8,
     name: "Teacher Leah",
     title: "Account Executive for Guatemala",
@@ -77,7 +78,7 @@ const teachers: Teacher[] = [
     image: "/9.svg",
     avatar: "/9.svg",
   },
-    {
+  {
     id: 9,
     name: "Teacher Ivy",
     title: "International Teacher",
@@ -85,7 +86,7 @@ const teachers: Teacher[] = [
     image: "/10.svg",
     avatar: "/10.svg",
   },
-    {
+  {
     id: 10,
     name: "Teacher Dennise",
     title: "Account Executive for Taiwan",
@@ -93,7 +94,7 @@ const teachers: Teacher[] = [
     image: "/11.svg",
     avatar: "/11.svg",
   },
-    {
+  {
     id: 11,
     name: "Teacher Krishna",
     title: "International Teacher",
@@ -101,7 +102,7 @@ const teachers: Teacher[] = [
     image: "/12.svg",
     avatar: "/12.svg",
   },
-    {
+  {
     id: 12,
     name: "Teacher Keziah",
     title: "Account Executive for China Accounts",
@@ -109,7 +110,7 @@ const teachers: Teacher[] = [
     image: "/13.svg",
     avatar: "/13.svg",
   },
-    {
+  {
     id: 13,
     name: "Teacher Jamie",
     title: "International Teacher",
@@ -117,7 +118,7 @@ const teachers: Teacher[] = [
     image: "/14.svg",
     avatar: "/14.svg",
   },
-    {
+  {
     id: 14,
     name: "Teacher Raven",
     title: "Assistant HR/International Teacher",
@@ -125,7 +126,7 @@ const teachers: Teacher[] = [
     image: "/15.svg",
     avatar: "/15.svg",
   },
-      {
+  {
     id: 15,
     name: "Teacher Renz",
     title: "International Teacher",
@@ -133,7 +134,7 @@ const teachers: Teacher[] = [
     image: "/16.svg",
     avatar: "/16.svg",
   },
-      {
+  {
     id: 16,
     name: "Teacher Trishia",
     title: "International Teacher",
@@ -193,9 +194,9 @@ export default function MeetTheTeachers() {
             <Image
               src={bdmTeacher.image || "/placeholder.svg"}
               alt={bdmTeacher.name}
-              className="w-full h-auto rounded-lg shadow-lg"
-              width={600}
-              height={400}
+              className="w-80 h-auto rounded-lg shadow-lg ml-auto"
+              width={400}
+              height={300}
             />
           </div>
         </div>
@@ -223,42 +224,40 @@ export default function MeetTheTeachers() {
                   </svg>
                 </a>
                 <a href="#" className="text-white hover:text-rose-200 transition">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7" />
-                  </svg>
+                  <Image src="/instagram.svg" alt="Instagram" className="w-5 h-5" width={20} height={20} style={{ filter: 'invert(1)' }} />
                 </a>
                 <a href="#" className="text-white hover:text-rose-200 transition">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <path
-                      d="M16.6915026,12.4744748 L16.6915026,12.4744748 C16.6915026,14.1002199 15.3917682,15.4144899 13.8013399,15.4144899 L10.4786667,15.4144899 L10.4786667,9.53448713 L13.8013399,9.53448713 C15.3917682,9.53448713 16.6915026,10.8487571 16.6915026,12.4744748 Z M14.4744748,12.4744748 C14.4744748,11.5089605 13.8013399,10.8358256 12.8358256,10.8358256 L11.6915026,10.8358256 L11.6915026,14.1131513 L12.8358256,14.1131513 C13.8013399,14.1131513 14.4744748,13.4400164 14.4744748,12.4744748 Z M18.5599348,15.4144899 L18.5599348,9.53448713 L19.8597692,9.53448713 L19.8597692,15.4144899 L18.5599348,15.4144899 Z M19.2098521,8.82360248 C18.6674486,8.82360248 18.2357516,8.39190548 18.2357516,7.84950198 C18.2357516,7.30709849 18.6674486,6.87540148 19.2098521,6.87540148 C19.7522556,6.87540148 20.1839526,7.30709849 20.1839526,7.84950198 C20.1839526,8.39190548 19.7522556,8.82360248 19.2098521,8.82360248 Z M9.29514851,15.4144899 L9.29514851,9.53448713 L10.5949829,9.53448713 L10.5949829,10.5599348 C10.9192053,9.97788954 11.5923402,9.53448713 12.5578545,9.53448713 C14.1482828,9.53448713 15.4480172,10.8487571 15.4480172,12.4744748 L15.4480172,12.4744748 C15.4480172,14.1002199 14.1482828,15.4144899 12.5578545,15.4144899 C11.5923402,15.4144899 10.9192053,14.9710875 10.5949829,14.3890422 L10.5949829,15.4144899 L9.29514851,15.4144899 Z M12.5578545,14.1131513 C13.5233688,14.1131513 14.1965037,13.4400164 14.1965037,12.4744748 L14.1965037,12.4744748 C14.1965037,11.5089605 13.5233688,10.8358256 12.5578545,10.8358256 C11.5923402,10.8358256 10.9192053,11.5089605 10.9192053,12.4744748 C10.9192053,13.4400164 11.5923402,14.1131513 12.5578545,14.1131513 Z"
-                      fill="white"
-                    />
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
               </div>
             </div>
 
             {/* Animated Team Member Cards */}
-            <div className="flex gap-4 overflow-x-auto md:animate-scroll">
-              {duplicatedTeamMembers.map((teacher, index) => (
-                <div
-                  key={`${teacher.id}-${index}`}
-                  className="flex-shrink-0 w-40 md:w-56 bg-gray-300 rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
-                >
-                  <Image
-                    src={teacher.image || "/placeholder.svg"}
-                    alt={teacher.name}
-                    className="w-full h-64 object-cover"
-                    width={600}
-                    height={400}
-                  />
-                  <div className="p-4 bg-gray-800 text-white">
-                    <p className="font-semibold text-sm">{teacher.name}</p>
-                    <p className="text-gray-300 text-xs">{teacher.title}</p>
+            <div className="flex gap-4 overflow-hidden">
+              <div className="flex gap-4 animate-scroll">
+                {duplicatedTeamMembers.map((teacher, index) => (
+                  <div
+                    key={`${teacher.id}-${index}`}
+                    className="flex-shrink-0 w-64 bg-gray-300 rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
+                  >
+                    <div className="h-96 overflow-hidden">
+                      <Image
+                        src={teacher.image || "/placeholder.svg"}
+                        alt={teacher.name}
+                        className="w-full h-full object-cover"
+                        width={600}
+                        height={400}
+                      />
+                    </div>
+                    <div className="p-4 bg-gray-800 text-white h-24 flex flex-col justify-center">
+                      <p className="font-semibold text-sm">{teacher.name}</p>
+                      <p className="text-gray-300 text-xs line-clamp-2">{teacher.title}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

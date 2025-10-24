@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
             {/* Placeholder Image */}
             <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-accent/20 to-primary/20 aspect-square md:aspect-auto md:h-96">
               <Image
-                src="/group.jpg"
+                src="/Image4.jpg"
                 alt="Professional English teacher conducting an online class"
                 className="w-full h-full object-cover"
                 width={400}
