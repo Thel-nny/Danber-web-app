@@ -167,7 +167,7 @@ export default function Contact() {
                   <Clock className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-gray-600 text-sm">Business Hours</p>
-                    <p className="text-black font-semibold">Monday to Friday, 9 AM - 6 PM (GMT)</p>
+                    <p className="text-black font-semibold">Monday to Saturday, 7 AM - 11 PM (GMT)</p>
                   </div>
                 </div>
               </div>

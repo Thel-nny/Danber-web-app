@@ -84,6 +84,40 @@ export default function Gallery() {
       image: "/Image17.jpg",
       size: "small",
     },
+      {
+      id: 18,
+      image: "/Image18.jpg",
+      size: "small",
+    },
+      {
+      id: 19,
+      image: "/Image19.jpg",
+      size: "small",
+    },
+      {
+      id: 20,
+      image: "/Image20.jpg",
+      size: "small",
+    },
+      {
+      id: 21,
+      image: "/Image21.jpg",
+      size: "small",
+    },
+      {
+      id: 22,
+      image: "/Image22.jpg",
+      size: "small",
+    },{
+      id: 23,
+      image: "/Image23.jpg",
+      size: "small",
+    },
+    {
+      id: 24,
+      image: "/Image24.jpg",
+      size: "small",
+    },
     
   ]
 
