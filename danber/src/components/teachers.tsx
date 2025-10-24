@@ -17,7 +17,7 @@ const teachers: Teacher[] = [
     id: 1,
     name: "Berthel T. Maguillano",
     title: "General Manager / CEO / COO",
-    bio: "With over 20 years of experience in English language education, Berthel T. Maguillano has dedicated her career to empowering learners worldwide. As CEO and General Manager of Danber Online Tutorial Services, she leads with a passion for accessible, high-quality ESL instruction. Her expertise in curriculum design, teacher development, and online learning platforms continues to shape the company’s mission: helping students thrive in a global, English-speaking world. She believes that even ",
+    bio: "Berthel Tabares Maguillano is the Chief Executive Officer and General Manager of DANBER Online Tutorial Services where she leads the company’s strategic direction, operations, and growth initiatives. With extensive experience in a wide range of ESL courses, specialized training and courses in Essential Management Skills, Human Resource and Management, Marketing and Communications, she has built a reputation for driving innovation, operational excellence, and sustainable business development. Under her leadership, DANBER  has maintained satisfaction with international language centers in China, Costa Rica, Colombia, Japan, Taiwan, Peru, Mexico and Vietnam. She is committed to fostering a culture of integrity, collaboration, and client-focused service, ensuring that the teaching methodology is properly imposed according to the specifications and standard procedure of various language centers worldwide.",
     image: "/CEO.png",
     avatar: "/CEO.png",
   },
