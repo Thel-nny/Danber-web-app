@@ -16,7 +16,7 @@ const teachers: Teacher[] = [
   {
     id: 1,
     name: "Berthel T. Maguillano",
-    title: "General Manager / CEO / COO",
+    title: "General Manager / CEO",
     bio: "Berthel Tabares Maguillano is the Chief Executive Officer and General Manager of DANBER Online Tutorial Services where she leads the company’s strategic direction, operations, and growth initiatives. With extensive experience in a wide range of ESL courses, specialized training and courses in Essential Management Skills, Human Resource and Management, Marketing and Communications, she has built a reputation for driving innovation, operational excellence, and sustainable business development. Under her leadership, DANBER  has maintained satisfaction with international language centers in China, Costa Rica, Colombia, Japan, Taiwan, Peru, Mexico and Vietnam. She is committed to fostering a culture of integrity, collaboration, and client-focused service, ensuring that the teaching methodology is properly imposed according to the specifications and standard procedure of various language centers worldwide.",
     image: "/CEO.png",
     avatar: "/CEO.png",
@@ -145,7 +145,8 @@ const teachers: Teacher[] = [
 
 export default function MeetTheTeachers() {
   const ceoTeacher = teachers[0]
-  const teamMembers = teachers.slice(1)
+  const bdmTeacher = teachers[1]
+  const teamMembers = teachers.slice(2)
   const duplicatedTeamMembers = [...teamMembers, ...teamMembers]
 
   return (
@@ -178,6 +179,27 @@ export default function MeetTheTeachers() {
           </div>
         </div>
 
+        {/* Featured BDM Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left Content */}
+          <div>
+            <h2 className="text-5xl md:text-6xl font-light mb-2 text-gray-900">{bdmTeacher.name}</h2>
+            <p className="text-lg text-gray-600 mb-8">{bdmTeacher.title}</p>
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base">{bdmTeacher.bio}</p>
+          </div>
+
+          {/* Right Image */}
+          <div>
+            <Image
+              src={bdmTeacher.image || "/placeholder.svg"}
+              alt={bdmTeacher.name}
+              className="w-full h-auto rounded-lg shadow-lg"
+              width={600}
+              height={400}
+            />
+          </div>
+        </div>
+
         {/* Team Carousel */}
         <div className="relative mt-16">
           <div className="flex items-center justify-between mb-8">
@@ -188,9 +210,9 @@ export default function MeetTheTeachers() {
             </h3>
           </div>
 
-          <div className="flex gap-4 overflow-hidden">
+          <div className="flex flex-col md:flex-row gap-4 overflow-hidden">
             {/* Featured CEO Card */}
-            <div className="flex-shrink-0 w-64 bg-rose-500 p-6 text-white relative z-10">
+            <div className="flex-shrink-0 w-full md:w-64 bg-rose-500 p-6 text-white relative z-10">
               <h4 className="text-xl font-bold mb-1">{ceoTeacher.name}</h4>
               <p className="text-rose-100 text-sm mb-4">{ceoTeacher.title}</p>
               <p className="text-rose-50 text-sm mb-6 line-clamp-3">{ceoTeacher.bio}</p>
@@ -218,11 +240,11 @@ export default function MeetTheTeachers() {
             </div>
 
             {/* Animated Team Member Cards */}
-            <div className="flex gap-4 animate-scroll">
+            <div className="flex gap-4 overflow-x-auto md:animate-scroll">
               {duplicatedTeamMembers.map((teacher, index) => (
                 <div
                   key={`${teacher.id}-${index}`}
-                  className="flex-shrink-0 w-56 bg-gray-300 rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
+                  className="flex-shrink-0 w-40 md:w-56 bg-gray-300 rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
                 >
                   <Image
                     src={teacher.image || "/placeholder.svg"}

@@ -144,7 +144,7 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="text-gray-600 text-sm">Phone</p>
+                    <p className="text-gray-600 text-sm">Phone / WhatsApp</p>
                     <a href="tel:+639778556355" className="text-black-600 font-semibold hover:underline">
                       +639778556355 
                     </a>

@@ -2,7 +2,7 @@ import { Award, Globe } from "lucide-react"
 import Image from "next/image"
 
 export default function WhyChooseUs() {
-  const certifications = ["TEFL", "TESOL", "TOEFL", "CESL", "CFR"]
+  const certifications = ["TEFL", "TESOL", "TEYL", "TOEFL","CEFR"]
 
   const features = [
     {
