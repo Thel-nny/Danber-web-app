@@ -136,7 +136,7 @@ const teachers: Teacher[] = [
   },
   {
     id: 16,
-    name: "Teacher Trishia",
+    name: "Teacher Anny",
     title: "International Teacher",
     bio: "",
     image: "/17.svg",
