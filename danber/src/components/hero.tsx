@@ -1,14 +1,22 @@
+"use client"
+
+import { motion } from 'framer-motion'
 import TeacherImageWithBackground from "@/components/ui/TeacherImageWithBackground"
 
 export default function Hero() {
   return (
-    <section className="pt-40 pb-12 md:pb-24 lg:pb-32 bg-white">
+    <motion.section
+      className="pt-40 pb-12 md:pb-24 lg:pb-32 bg-white min-h-screen flex items-center justify-center"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
                 Use English Effectively,
                 <br />
                 <span className="relative">
@@ -30,20 +38,17 @@ export default function Hero() {
               </h1>
             </div>
 
-            <p className="text-gray-600 text-lg leading-relaxed max-w-md">
+            <p className="text-gray-600 text-base leading-relaxed max-w-md">
               When students get the right English lessons and teachers have the right tools, learning becomes easier.
               This helps students speak with confidence, find new opportunities, and succeed in school, work, and life.
             </p>
 
-            <button className="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-semibold px-8 py-3 rounded-md transition-colors">
-              Get Started
-            </button>
           </div>
 
           {/* Right Side */}
           <TeacherImageWithBackground />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

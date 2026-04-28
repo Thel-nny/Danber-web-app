@@ -1,4 +1,5 @@
 "use client"
+import { motion } from 'framer-motion'
 import Image from "next/image"
 import type React from "react"
 
@@ -45,11 +46,17 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-white py-20 px-8">
+    <motion.section
+      id="contact"
+      className="bg-white py-20 px-8"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <p className="text-amber-600 font-semibold mb-2">Contact us</p>
-          <h2 className="text-5xl font-bold text-red-600 mb-6">Get in Touch with Our Team</h2>
+          <h2 className="text-4xl font-bold text-red-600 mb-6">Get in Touch with Our Team</h2>
           <p className="text-gray-600 max-w-2xl">
             We&apos;re here to answer your questions, discuss your concerns, and help you find the best teachers for your
              needs. Reach out to us, and let&apos;s start building something great together.
@@ -57,7 +64,7 @@ export default function Contact() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-black mb-8">Tell Us About You</h3>
+            <h3 className="text-lg font-bold text-black mb-8">Tell Us About You</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-black mb-2">Name</label>
@@ -189,6 +196,8 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+
+    </motion.section>
+
   )
 }

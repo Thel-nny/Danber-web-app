@@ -96,3 +96,12 @@
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+@media (min-width: 1000px) {
+  .show-at-1000 {
+    display: flex;
+  }
+  .hide-at-1000 {
+    display: none;
+  }
+}

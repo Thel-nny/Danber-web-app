@@ -2,7 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
-import Link from "next/link"
+
 
 interface Teacher {
   id: number
@@ -64,8 +64,8 @@ const teachers: Teacher[] = [
   },
   {
     id: 7,
-    name: "Teacher Jewel",
-    title: "Admin for Payroll/International Teacher",
+    name: "Teacher Anny",
+    title: "International Teacher",
     bio: "",
     image: "/8.svg",
     avatar: "/8.svg",
@@ -88,8 +88,8 @@ const teachers: Teacher[] = [
   },
   {
     id: 10,
-    name: "Teacher Dennise",
-    title: "Account Executive for Taiwan",
+    name: "Teacher Loraine",
+    title: "International Teacher",
     bio: "",
     image: "/11.svg",
     avatar: "/11.svg",
@@ -104,8 +104,8 @@ const teachers: Teacher[] = [
   },
   {
     id: 12,
-    name: "Teacher Keziah",
-    title: "Account Executive for China Accounts",
+    name: "Teacher Jeffrey",
+    title: "International Teacher",
     bio: "",
     image: "/13.svg",
     avatar: "/13.svg",
@@ -128,19 +128,11 @@ const teachers: Teacher[] = [
   },
   {
     id: 15,
-    name: "Teacher Renz",
+    name: "Teacher Eirene",
     title: "International Teacher",
     bio: "",
     image: "/16.svg",
     avatar: "/16.svg",
-  },
-  {
-    id: 16,
-    name: "Teacher Anny",
-    title: "International Teacher",
-    bio: "",
-    image: "/17.svg",
-    avatar: "/17.svg",
   },
 ]
 
@@ -163,7 +155,7 @@ export default function MeetTheTeachers() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Content */}
           <div>
-            <h2 className="text-5xl md:text-6xl font-light mb-2 text-gray-900">{ceoTeacher.name}</h2>
+            <h2 className="text-4xl md:text-3xl font-bold mb-2 text-gray-900">{ceoTeacher.name}</h2>
             <p className="text-lg text-gray-600 mb-8">{ceoTeacher.title}</p>
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">{ceoTeacher.bio}</p>
           </div>
@@ -171,11 +163,11 @@ export default function MeetTheTeachers() {
           {/* Right Image */}
           <div>
             <Image
-              src={ceoTeacher.image || "/placeholder.svg"}
+              src={ceoTeacher.image || "/CEO.png"}
               alt={ceoTeacher.name}
               className="w-full h-auto rounded-lg shadow-lg"
-              width={600}
-              height={400}
+              width={200}
+              height={200}
             />
           </div>
         </div>
@@ -184,15 +176,15 @@ export default function MeetTheTeachers() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Content */}
           <div>
-            <h2 className="text-5xl md:text-6xl font-light mb-2 text-gray-900">{bdmTeacher.name}</h2>
-            <p className="text-lg text-gray-600 mb-8">{bdmTeacher.title}</p>
+            <h2 className="text-4xl md:text-5xl font-light mb-2 text-gray-900">{bdmTeacher.name}</h2>
+            <p className="text-base text-gray-600 mb-8">{bdmTeacher.title}</p>
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">{bdmTeacher.bio}</p>
           </div>
 
           {/* Right Image */}
           <div>
             <Image
-              src={bdmTeacher.image || "/placeholder.svg"}
+              src={bdmTeacher.image || "/3.svg"}
               alt={bdmTeacher.name}
               className="w-80 h-auto rounded-lg shadow-lg ml-auto"
               width={400}
@@ -212,26 +204,11 @@ export default function MeetTheTeachers() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 overflow-hidden">
-            {/* Featured CEO Card */}
-            <div className="flex-shrink-0 w-full md:w-64 bg-rose-500 p-6 text-white relative z-10">
-              <h4 className="text-xl font-bold mb-1">{ceoTeacher.name}</h4>
-              <p className="text-rose-100 text-sm mb-4">{ceoTeacher.title}</p>
-              <p className="text-rose-50 text-sm mb-6 line-clamp-3">{ceoTeacher.bio}</p>
-              <div className="flex gap-3">
-                <a href="#" className="text-white hover:text-rose-200 transition">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                </a>
-                <a href="#" className="text-white hover:text-rose-200 transition">
-                  <Image src="/instagram.svg" alt="Instagram" className="w-5 h-5" width={20} height={20} style={{ filter: 'invert(1)' }} />
-                </a>
-                <a href="#" className="text-white hover:text-rose-200 transition">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </a>
-              </div>
+            {/* About Danber Text */}
+            <div className="flex-shrink-0 w-full md:w-80 bg-rose-500 p-6 text-white relative z-10 rounded-2xl overflow-y-auto">
+              <p className="text-sm leading-relaxed">
+                Danber Online Tutorial Services is a Filipino-led online education company dedicated to teaching English to learners across the globe. With a team of skilled and culturally adaptable tutors, we provide accessible, flexible, and engaging lessons tailored to the needs of international students. Our approach combines professional expertise with the warmth and hospitality Filipinos are known for, creating a supportive environment where learners can build confidence, improve communication skills, and connect meaningfully in English. At Danber, we believe language is more than grammar and vocabulary, it is a bridge to opportunity, understanding, and global connection.
+              </p>
             </div>
 
             {/* Animated Team Member Cards */}
@@ -244,7 +221,7 @@ export default function MeetTheTeachers() {
                   >
                     <div className="h-96 overflow-hidden">
                       <Image
-                        src={teacher.image || "/placeholder.svg"}
+                        src={teacher.image || "/1.svg"}
                         alt={teacher.name}
                         className="w-full h-full object-cover"
                         width={600}

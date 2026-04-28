@@ -1,7 +1,10 @@
-import type { LucideIcon } from "lucide-react"
+"use client"
+
+import { motion } from "framer-motion"
+import { BookOpen, Users, Zap, Target, Briefcase, TrendingUp, FileText, Award, BookMarked, Headphones, PenTool } from "lucide-react"
 
 interface ServiceCard {
-  icon: LucideIcon
+  icon: string
   title: string
   description: string
   link?: string
@@ -13,9 +16,28 @@ interface CourseServicesProps {
   services: ServiceCard[]
 }
 
+const iconMap = {
+  BookOpen,
+  Users,
+  Zap,
+  Target,
+  Briefcase,
+  TrendingUp,
+  FileText,
+  Award,
+  BookMarked,
+  Headphones,
+  PenTool,
+}
+
 export default function CourseServices({ title, subtitle, services }: CourseServicesProps) {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-background">
+    <motion.section
+      className="py-16 md:py-24 px-4 md:px-8 bg-background"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -23,7 +45,7 @@ export default function CourseServices({ title, subtitle, services }: CourseServ
           <h2 className="text-4xl md:text-5xl font-bold text-foreground max-w-3xl mx-auto leading-tight text-balance">
             {title}
           </h2>
-          <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">{subtitle}</p>
+          <p className="text-base text-muted-foreground mt-4 max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
         {/* Divider */}
@@ -32,19 +54,19 @@ export default function CourseServices({ title, subtitle, services }: CourseServ
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon
+            const IconComponent = iconMap[service.icon as keyof typeof iconMap]
             return (
               <div key={index} className="flex flex-col items-center text-center">
                 {/* Icon */}
                 <div className="mb-6 p-4 rounded-lg bg-muted/30 border border-border">
-                  <Icon className="w-8 h-8 text-amber-500" />
+                  <IconComponent className="w-8 h-8 text-amber-500" />
                 </div>
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-rose-700 mb-3">{service.title}</h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">{service.description}</p>
+                <p className="text-muted-foreground text-xs leading-relaxed mb-4 flex-grow">{service.description}</p>
               </div>
             )
           })}
@@ -58,6 +80,6 @@ export default function CourseServices({ title, subtitle, services }: CourseServ
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

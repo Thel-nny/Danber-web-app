@@ -1,3 +1,7 @@
+"use client"
+"use client"
+
+import { motion } from 'framer-motion'
 import { Award, Globe } from "lucide-react"
 import Image from "next/image"
 
@@ -18,8 +22,13 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+    <motion.section
+      className="py-16 md:py-24 px-4 md:px-8"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div>
@@ -29,12 +38,12 @@ export default function WhyChooseUs() {
               <span className="text-sm font-bold text-rose-600 tracking-wider text-muted-foreground">WHY CHOOSE US</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
               Master English with <span className="text-rose-600">Certified Experts</span>
             </h2>
 
             {/* Description */}
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base text-muted-foreground mb-8 leading-relaxed">
               We provide world-class English language education through certified instructors and proven teaching
               methodologies. Our commitment to excellence ensures every student achieves their language goals.
             </p>
@@ -48,7 +57,7 @@ export default function WhyChooseUs() {
                     <div className="mb-4">
                       <Icon className="w-8 h-8 text-rose-600" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
+                    <h3 className="text-base font-bold text-foreground mb-2">{feature.title}</h3>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>
                 )
@@ -71,7 +80,7 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Bottom Text */}
-            <p className="text-sm text-muted-foreground mt-8">
+            <p className="text-xs text-muted-foreground mt-8">
               Our platform combines modern technology with expert instruction to deliver personalized learning
               experiences that transform lives and open doors to global opportunities.
             </p>
@@ -106,6 +115,6 @@ export default function WhyChooseUs() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

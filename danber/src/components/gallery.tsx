@@ -137,7 +137,7 @@ export default function Gallery() {
               className="break-inside-avoid overflow-hidden rounded-lg cursor-pointer group hover:opacity-90 transition-opacity"
             >
               <Image
-                src={item.image || "/placeholder.svg"}
+                src={item.image || "/1.svg"}
                 alt={`Gallery item ${item.id}`}
                 width={400}
                 height={300}
