@@ -57,7 +57,7 @@ const teachers: Teacher[] = [
   {
     id: 6,
     name: "Teacher Wildee",
-    title: "International Teacher",
+    title: "International Teacher / Account Executive for China",
     bio: "",
     image: "/7.svg",
     avatar: "/7.svg",
@@ -110,8 +110,24 @@ const teachers: Teacher[] = [
     image: "/13.svg",
     avatar: "/13.svg",
   },
-  {
+    {
     id: 13,
+    name: "Teacher Homer",
+    title: "International Teacher",
+    bio: "",
+    image: "/17.svg",
+    avatar: "/17.svg",
+  },
+    {
+    id: 14,
+    name: "Teacher Russell",
+    title: "International Teacher",
+    bio: "",
+    image: "/18.svg",
+    avatar: "/18.svg",
+  },
+  {
+    id: 15,
     name: "Teacher Jamie",
     title: "International Teacher",
     bio: "",
@@ -119,7 +135,7 @@ const teachers: Teacher[] = [
     avatar: "/14.svg",
   },
   {
-    id: 14,
+    id: 16,
     name: "Teacher Raven",
     title: "Assistant HR/International Teacher",
     bio: "",
@@ -127,7 +143,7 @@ const teachers: Teacher[] = [
     avatar: "/15.svg",
   },
   {
-    id: 15,
+    id: 17,
     name: "Teacher Eirene",
     title: "International Teacher",
     bio: "",
