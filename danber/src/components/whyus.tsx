@@ -1,6 +1,4 @@
 "use client"
-"use client"
-
 import { motion } from 'framer-motion'
 import { Award, Globe } from "lucide-react"
 import Image from "next/image"

@@ -18,7 +18,7 @@ const teachers: Teacher[] = [
     id: 1,
     name: "Berthel T. Maguillano",
     title: "General Manager / CEO",
-    bio: "Berthel Tabares Maguillano is the Chief Executive Officer and General Manager of DANBER Online Tutorial Services where she leads the company's strategic direction, operations, and growth initiatives. With extensive experience in a wide range of ESL courses, specialized training and courses in Essential Management Skills, Human Resource and Management, Marketing and Communications, she has built a reputation for driving innovation, operational excellence, and sustainable business development. Under her leadership, DANBER  has maintained satisfaction with international language centers in China, Costa Rica, Colombia, Japan, Taiwan, Peru, Mexico and Vietnam. She is committed to fostering a culture of integrity, collaboration, and client-focused service, ensuring that the teaching methodology is properly imposed according to the specifications and standard procedure of various language centers worldwide.",
+    bio: "Berthel Tabares Maguillano is the Chief Executive Officer and General Manager of DANBER Online Tutorial Services where she leads the company's strategic direction, operations, and growth initiatives. With extensive experience in a wide range of ESL courses, specialized training and courses in Essential Management Skills, Human Resource and Management, Marketing and Communications, she has built a reputation for driving innovation, operational excellence, and sustainable business development. Under her leadership, DANBER has maintained satisfaction with international language centers in China, Costa Rica, Colombia, Guatemala, Japan, Mexico, Peru, Taiwan, and Vietnam. She is committed to fostering a culture of integrity, collaboration, and client-focused service, ensuring that the teaching methodology is properly imposed according to the specifications and standard procedure of various language centers worldwide.",
     image: "/CEO.png",
     avatar: "/CEO.png",
   },
@@ -72,11 +72,11 @@ const teachers: Teacher[] = [
   },
   {
     id: 8,
-    name: "Teacher Leah",
-    title: "Account Executive for Guatemala",
+    name: "Teacher Lyn",
+    title: "International Teacher",
     bio: "",
-    image: "/9.svg",
-    avatar: "/9.svg",
+    image: "/21.svg",
+    avatar: "/21.svg",
   },
   {
     id: 9,
@@ -128,7 +128,7 @@ const teachers: Teacher[] = [
   },
   {
     id: 15,
-    name: "Teacher Jamie",
+    name: "Teacher Kat",
     title: "International Teacher",
     bio: "",
     image: "/14.svg",
@@ -150,6 +150,25 @@ const teachers: Teacher[] = [
     image: "/16.svg",
     avatar: "/16.svg",
   },
+    {
+    id: 18,
+    name: "Teacher Jerelyn",
+    title: "International Teacher",
+    bio: "",
+    image: "/19.svg",
+    avatar: "/19.svg",
+  },
+    {
+    id: 19,
+    name: "Teacher Ella",
+    title: "International Teacher",
+    bio: "",
+    image: "/9.svg",
+    avatar: "/9.svg",
+  },
+  
+  
+
 ]
 
 export default function MeetTheTeachers() {
